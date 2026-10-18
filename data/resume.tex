@@ -1,0 +1,333 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+% \raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+% \titleformat{\section}{
+%   \vspace{-4pt}\scshape\raggedright\large\bfseries
+% }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}{
+  \scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule]
+
+\titlespacing*{\section}{0pt}{2pt}{4pt}
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+% \newcommand{\resumeItem}[1]{
+%   \item\small{
+%     {#1 \vspace{-2pt}}
+%   }
+% }
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-10pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+% \newcommand{\resumeProjectHeading}[2]{
+%     \item
+%     \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+%       \small#1 & \textbf{\small #2}\\
+%     \end{tabular*}\vspace{-7pt}
+% }
+
+% \newcommand{\resumeProjectHeadingWithLink}[4]{
+%   \item
+%   \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+%     \textbf{#1} \;\textbar\; \href{#2}{\underline{Project Link}} & \textbf{#4} \\
+%   \end{tabular*}
+%   \vspace{-4pt}
+%   {\small\emph{#3}}
+% }
+
+\newcommand{\resumeProjectHeadingWithLink}[4]{
+  \item
+  \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} \;{\small(\emph{#3})} \;\textbar\; \href{#2}{\underline{Project Link}} & \textbf{#4} \\
+  \end{tabular*}
+  \vspace{-18pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label={}]}
+
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+% \newcommand{\resumeItemListStart}{\begin{itemize}}
+% \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[
+    leftmargin=20pt,
+    topsep=2pt,
+    itemsep=2pt,
+    parsep=0pt,
+    partopsep=0pt
+  ]
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+% --- Skills block (tight + consistent) ---
+\newcommand{\skillsStart}{
+  \begin{itemize}[leftmargin=0in,label={},topsep=0pt,itemsep=0pt,parsep=0pt,partopsep=0pt]
+  \item \small
+}
+
+\newcommand{\skillsEnd}{
+  \end{itemize}\vspace{-2pt}
+}
+
+\newcommand{\skillrow}[2]{\textbf{#1}: #2\\}
+
+\newcommand{\sectionEnd}{\vspace{4pt}}
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\justifying
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+  {\LARGE \textbf{Aaryan Manish Purohit}}
+\end{center}
+
+\vspace{-12pt}
+
+\begin{center}
+\faPhone*[regular]\ (930)~904--3794 \enspace \textbar \enspace
+\faEnvelope\ \href{mailto:aaryan.prof1@gmail.com}{aaryan.prof1@gmail.com} \enspace \textbar \enspace
+\faLinkedin\ \href{https://www.linkedin.com/in/aapuro/}{aapuro} \enspace \textbar \enspace
+\faGithub\ \href{https://github.com/AaryanPurohit}{AaryanPurohit} \enspace \textbar \enspace
+\faGlobe\ \href{https://aaryan-purohit-portfolio.vercel.app/}{aaryanpurohit}
+\end{center}
+\vspace{-6pt}
+
+% \noindent \textit{AI/ML Engineer focused on LLMs, agentic AI, RAG systems, and production-ready ML pipelines (Python, SQL, Cloud)}
+
+% \section{PROFESSIONAL SUMMARY}
+% \vspace{3pt}
+
+% % % \noindent AI Engineer proficient in Python, Gen AI, LLMs, ML/DL, SQL, and BI tools, supported by 4 high-impact internships, 10+ real-world projects, and 3 IEEE/Springer publications. Engineered solutions including a hackathon-winning multi-agent hospital system, a financial education LLM assistant, and a data-driven analytics tool that tripled restaurant revenue. Committed to advancing AI automation that streamlines operations, reduces manual effort, and drives measurable business performance.
+
+% \noindent AI Engineer with 2+ years of hands-on experience building production-grade systems across agentic AI, LLMs, and machine learning. Experienced in multi-agent and MCP-based workflows, RAG chatbots, and cloud-native ETL pipelines. Focused on automation, scalability, and building user-facing AI systems for real-world use.
+
+\vspace{3pt}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indiana University Bloomington}{Aug 2024 -- May 2026}
+      {Master of Science in Data Science - GPA: 4.0/4.0}{Indiana, USA}
+    \resumeSubheading
+      {University of Mumbai}{Feb 2020 -- May 2024}
+      {Bachelor of Technology in Computer Engineering - GPA: 3.8/4.0}{Mumbai, India}
+  \resumeSubHeadingListEnd
+\vspace{5pt}
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Perficient}{Jun 2026 -- Present}
+      {Forward Deployed AI Engineer}{Chicago, USA}
+      \resumeItemListStart
+        \resumeItem{Advanced \textbf{2 opportunities} and eliminated \textbf{$\sim$5 hrs/day} of manual research with a production \textbf{multi-tenant Claude SDK agent} matching SEC filings and news to Salesforce opportunities via \textbf{GraphRAG} on \textbf{Cloud Run}, with guardrails blocking confidential content in generated campaigns.}
+        \resumeItem{Built a \textbf{long-running human-in-the-loop (HITL) agent} for a \textbf{Fortune 25} automotive client on \textbf{Gemini Enterprise}, achieving \textbf{90\% agreement} with human decisions and \textbf{95\% evidence traceability}, validated through \textbf{LLM + deterministic evals}.}
+
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Indiana University, Search and Discoverability Experience Team}{Sept 2025 -- May 2026}
+      {AI/ML Engineer}{Indiana, USA}
+      \resumeItemListStart
+        \resumeItem{Led 3 engineers to build a fault-tolerant ETL pipeline on \textbf{GCP Cloud Run} and \textbf{BigQuery} that powers live \textbf{Tableau} dashboards for senior leadership across \textbf{38} peer institutions.}
+        \resumeItem{Reduced manual review effort by \textbf{95\%} by building a production-grade \textbf{AI-driven toxic backlink disavow system}, processing \textbf{1M+} backlinks using batch inference and web-context retrieval.}
+        % \resumeItem{Designed observability, monitoring, and maintenance workflows to track model outputs and system health, improving IU's authority score within \textbf{3} months.}
+        % \resumeItem{Demoed AI/search tools at \textbf{Indiana Statewide IT Conference 2026} to \textbf{50+} stakeholders, including Reddit Analytics for student content gap discovery, ChatAIU, and discoverability workflows into clear business value for non-technical audiences.}
+        \resumeItem{Demoed AI/search products at \textbf{Indiana Statewide IT Conference 2026} to \textbf{50+} attendees, translating Reddit Analytics, ChatAIU, and discoverability workflows into user pain points and business impact.}
+        \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Evoort Solutions}{Jun 2025 -- Aug 2025}
+      {AI Engineer Intern}{Minnesota, USA}
+      \resumeItemListStart
+        % \resumeItem{Implemented an \textbf{MCP}-based client-server travel assistant with FastAPI and Amadeus APIs, orchestrating flight search, hotel lookup, and trip-planning tools to expand support from \textbf{2} to \textbf{10+} query categories}.
+
+        % \resumeItem{Refined \textbf{LLM prompts} and workflow logic for the travel assistant using \textbf{Ollama}-based local models for privacy-aware intent classification and conversational support, increasing engagement by \textbf{30\%}.}
+
+        \resumeItem{Built an \textbf{MCP}-based travel assistant with FastAPI and Amadeus APIs, orchestrating \textbf{10+} flight, hotel, and trip-planning tools while routing sensitive intent classification to \textbf{local models via Ollama} for privacy, increasing engagement by \textbf{30\%}.}
+
+        \resumeItem{Owned a \textbf{LangChain + FAISS RAG pipeline} for U.S. DOT and airline-policy QA, using \textbf{hierarchical chunking} and \textbf{BM25 + vector retrieval} to improve grounded responses by \textbf{60\%}.}
+    \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Advertising Saga}{Jan 2022 -- May 2022}
+    %   {Data Scientist Intern}{Mumbai, India}
+    %   \resumeItemListStart
+    %     \resumeItem{Automated serverless ETL pipelines using \textbf{AWS Lambda} and \textbf{DynamoDB} to ingest Amazon Seller API data, reducing manual data handling by \textbf{30\%} and enabling scalable analytics workflows.}
+
+    %     \resumeItem{Engineered a supervised machine learning pipeline to predict campaign ROI, integrating results into Power BI dashboards and improving advertising efficiency by \textbf{15\%}.}
+
+    %     % \resumeItem{Collaborated with product and marketing teams to redesign the Amazon Seller onboarding experience using usage analytics \& A/B testing, improving retention and user experience by \textbf{40\%}.}
+    % \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{RELEVANT PROJECTS}
+    % \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeadingWithLink
+          {Smart Hospital Multi-Agent System}
+          {https://github.com/AaryanPurohit/SHMAS-Smart-Hospital-Multi-Agent-System}
+          {Python, PostgreSQL, LangChain, LangGraph, Streamlit}
+          {}
+
+        \resumeItemListStart
+          \resumeItem{Built a \textbf{5-agent AI system} with task routing, shared memory and inter-agent coordination enabling emergency hospital workflows, including mental health screening and resource allocation.}
+          \resumeItem{Implemented real-time state tracking and monitoring via a \textbf{PostgreSQL-backed dashboard}, automating \textbf{70\%} of manual tasks in hospital workflows.}
+        \resumeItemListEnd
+
+      \resumeProjectHeadingWithLink
+      {Financial Education AI Assistant}
+      {https://github.com/AaryanPurohit/Fin_Edu_LLm}
+      {Python, Transformers, LangChain, LlamaIndex, Gradio}
+      {}
+
+    \resumeItemListStart
+      \resumeItem{Designed a context-aware \textbf{RAG-based financial education assistant} using LangChain and LlamaIndex, reducing LLM hallucinations by\textbf{~50\%} via semantic retrieval and prompt orchestration.}
+    \resumeItemListEnd
+
+    % \resumeProjectHeadingWithLink
+    %   {Real-Time Crypto Analytics (AWS)}
+    %   {https://github.com/AaryanPurohit/AWS-based-Real-Time-Cryptocurrency-Analytics-Platform}
+    %   {AWS, Terraform, Python, FastAPI, React.js, MLOps}
+    %   {}
+
+    % \resumeItemListStart
+    %   \resumeItem{Built a real-time streaming analytics platform on \textbf{AWS} using Kinesis, Lambda, and DynamoDB with Terraform IaC, processing \textbf{1M+} daily data points.}
+
+    %   \resumeItem{Designed a S3 data lake with Redis caching and CloudWatch monitoring, achieving \textbf{80\%} faster query performance.}
+
+    %   \resumeItem{Deployed a production ML inference pipeline on SageMaker with Random Forest and LSTM models, serving predictions via FastAPI with sub-\textbf{200ms} latency.}
+    % \resumeItemListEnd
+
+\section{TECHNICAL SKILLS}
+\skillsStart
+  \skillrow{AI \& Agentic Systems}{Claude SDK, Claude API, MCP Servers, Agent Orchestration, Tool Use / Function Calling, RAG \& GraphRAG, Evaluation Frameworks, Guardrails, Prompt \& Context Engineering, Observability, Spec-Driven Development (SDD); Claude, OpenAI, Gemini}
+  \skillrow{Languages \& Backend}{Python, SQL, R, FastAPI, NOSQL, REST APIs, Data Modeling, HTML/CSS, JavaScript}
+  \skillrow{Data \& Cloud}{PostgreSQL, MySQL, MongoDB, Neo4j, BigQuery, DynamoDB, FAISS, Pinecone, GCP, AWS, Azure, Docker, GitHub, CI/CD}
+  \skillrow{ML \& AI}{TensorFlow, PyTorch, Keras, Pandas, Regression, Decision Trees, Clustering, Computer Vision, CNNs, Transformers, LangChain, LangGraph, CrewAI, MCP, A2A Hugging Face, RAG, NLP, OpenAI, Vector DB (FAISS, Pinecone)}
+  % \skillrow{Analytics}{MS Excel, Power BI, Tableau, Looker Studio, AWS QuickSight, Google Analytics}
+\skillsEnd
+
+ \vspace{-10pt}
+% -----------INVOLVEMENT---------------
+\section{ACHIEVEMENTS}
+\resumeItemListStart
+  \resumeItem{\textbf{1st Place, NSBE Honeywell Hackathon 2026:} Awarded \textbf{\$2500} for \textbf{UnStutterAI} among \textbf{50+ teams}.}
+  \resumeItem{\textbf{2nd Runner-Up, Luddy Hackathon (4th Edition):} Awarded for SHMAS project, among \textbf{70 teams}.}
+  \resumeItem{\textbf{Publications:} Authored \textbf{4 research papers} published in \textbf{IEEE and Springer}, proposing novel deep learning architectures, preprocessing techniques, and OCR systems in collaboration with \textbf{IIT Patna}.}
+  \resumeItem{Mentored \textbf{120+} graduate students as a \textbf{TA} in SQL and relational data modeling, with a focus on query optimization.}
+\resumeItemListEnd
+
+
+%-----------CERTIFICATIONS-----------
+\section{CERTIFICATIONS}
+\resumeItemListStart
+  \resumeItem{\textbf{Claude Certified Architect -- Professional} (Anthropic) \hfill \textit{Expires Sep 2027}}
+  \resumeItem{\textbf{Claude Certified Architect -- Foundations} (Anthropic) \hfill \textit{Expires Aug 2027}}
+  % \resumeItem{\textbf{AWS Certified AI Practitioner} (Amazon Web Services) \hfill \textit{Expires Sep 2029}}
+  % \resumeItem{\textbf{Generative AI Leader Certification} (Google Cloud) \hfill \textit{Expires Sep 2029}}
+\resumeItemListEnd
+
+
+\end{document}

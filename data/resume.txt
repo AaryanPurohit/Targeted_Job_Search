@@ -1,0 +1,46 @@
+Aaryan Manish Purohit
+Phone: (930) 904-3794 | Email: aaryan.prof1@gmail.com | LinkedIn: linkedin.com/in/aapuro | GitHub: github.com/AaryanPurohit | Portfolio: aaryan-purohit-portfolio.vercel.app
+
+EDUCATION
+Indiana University Bloomington — Master of Science in Data Science, GPA: 4.0/4.0 (Aug 2024 – May 2026), Indiana, USA
+University of Mumbai — Bachelor of Technology in Computer Engineering, GPA: 3.8/4.0 (Feb 2020 – May 2024), Mumbai, India
+
+EXPERIENCE
+
+Perficient — Forward Deployed AI Engineer (Jun 2026 – Present), Chicago, USA
+- Advanced 2 opportunities and eliminated ~5 hrs/day of manual research with a production multi-tenant Claude SDK agent matching SEC filings and news to Salesforce opportunities via GraphRAG on Cloud Run, with guardrails blocking confidential content in generated campaigns.
+- Built a long-running human-in-the-loop (HITL) agent for a Fortune 25 automotive client on Gemini Enterprise, achieving 90% agreement with human decisions and 95% evidence traceability, validated through LLM + deterministic evals.
+
+Indiana University, Search and Discoverability Experience Team — AI/ML Engineer (Sept 2025 – May 2026), Indiana, USA
+- Led 3 engineers to build a fault-tolerant ETL pipeline on GCP Cloud Run and BigQuery that powers live Tableau dashboards for senior leadership across 38 peer institutions.
+- Reduced manual review effort by 95% by building a production-grade AI-driven toxic backlink disavow system, processing 1M+ backlinks using batch inference and web-context retrieval.
+- Demoed AI/search products at Indiana Statewide IT Conference 2026 to 50+ attendees, translating Reddit Analytics, ChatAIU, and discoverability workflows into user pain points and business impact.
+
+Evoort Solutions — AI Engineer Intern (Jun 2025 – Aug 2025), Minnesota, USA
+- Built an MCP-based travel assistant with FastAPI and Amadeus APIs, orchestrating 10+ flight, hotel, and trip-planning tools while routing sensitive intent classification to local models via Ollama for privacy, increasing engagement by 30%.
+- Owned a LangChain + FAISS RAG pipeline for U.S. DOT and airline-policy QA, using hierarchical chunking and BM25 + vector retrieval to improve grounded responses by 60%.
+
+RELEVANT PROJECTS
+
+Smart Hospital Multi-Agent System (Python, PostgreSQL, LangChain, LangGraph, Streamlit) — github.com/AaryanPurohit/SHMAS-Smart-Hospital-Multi-Agent-System
+- Built a 5-agent AI system with task routing, shared memory and inter-agent coordination enabling emergency hospital workflows, including mental health screening and resource allocation.
+- Implemented real-time state tracking and monitoring via a PostgreSQL-backed dashboard, automating 70% of manual tasks in hospital workflows.
+
+Financial Education AI Assistant (Python, Transformers, LangChain, LlamaIndex, Gradio) — github.com/AaryanPurohit/Fin_Edu_LLm
+- Designed a context-aware RAG-based financial education assistant using LangChain and LlamaIndex, reducing LLM hallucinations by ~50% via semantic retrieval and prompt orchestration.
+
+TECHNICAL SKILLS
+AI & Agentic Systems: Claude SDK, Claude API, MCP Servers, Agent Orchestration, Tool Use / Function Calling, RAG & GraphRAG, Evaluation Frameworks, Guardrails, Prompt & Context Engineering, Observability, Spec-Driven Development (SDD); Claude, OpenAI, Gemini
+Languages & Backend: Python, SQL, R, FastAPI, NoSQL, REST APIs, Data Modeling, HTML/CSS, JavaScript
+Data & Cloud: PostgreSQL, MySQL, MongoDB, Neo4j, BigQuery, DynamoDB, FAISS, Pinecone, GCP, AWS, Azure, Docker, GitHub, CI/CD
+ML & AI: TensorFlow, PyTorch, Keras, Pandas, Regression, Decision Trees, Clustering, Computer Vision, CNNs, Transformers, LangChain, LangGraph, CrewAI, MCP, A2A, Hugging Face, RAG, NLP, Vector DB (FAISS, Pinecone)
+
+ACHIEVEMENTS
+- 1st Place, NSBE Honeywell Hackathon 2026: Awarded $2500 for UnStutterAI among 50+ teams.
+- 2nd Runner-Up, Luddy Hackathon (4th Edition): Awarded for SHMAS project, among 70 teams.
+- Publications: Authored 4 research papers published in IEEE and Springer, proposing novel deep learning architectures, preprocessing techniques, and OCR systems in collaboration with IIT Patna.
+- Mentored 120+ graduate students as a TA in SQL and relational data modeling, with a focus on query optimization.
+
+CERTIFICATIONS
+- Claude Certified Architect — Professional (Anthropic), expires Sep 2027
+- Claude Certified Architect — Foundations (Anthropic), expires Aug 2027

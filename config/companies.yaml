@@ -1,0 +1,19 @@
+# Add a company and the pipeline picks it up on the next run — no code changes needed.
+# ats_type must be one of: greenhouse | lever | ashby | generic_page
+#   greenhouse: board_token -> boards-api.greenhouse.io/v1/boards/<token>/jobs
+#   lever:      board_token -> api.lever.co/v0/postings/<token>
+#   ashby:      board_token -> api.ashbyhq.com/posting-api/job-board/<token>
+#   generic_page: careers_url -> rendered via Playwright, parsed by the Career-Page Extraction Agent
+#                 (use this for any company not on a standard ATS, e.g. a proprietary or Workday-based careers site)
+companies:
+  - name: Anthropic
+    ats_type: greenhouse
+    board_token: anthropic
+
+  - name: Apple
+    ats_type: generic_page
+    careers_url: "https://jobs.apple.com/en-us/search?team=machine-learning-and-ai-SFTWR-MCHLN"
+
+  - name: Nvidia
+    ats_type: generic_page
+    careers_url: "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite"

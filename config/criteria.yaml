@@ -1,0 +1,35 @@
+salary_floor_usd: 160000
+
+yoe:
+  min: 0
+  max: 5
+  note: "Inclusive of new-grad framing even when a posting nominally asks for more (e.g. Nvidia-style postings that still welcome new grads)."
+
+locations:
+  allowed:
+    - "San Francisco Bay Area"
+    - "Remote - United States"
+  country_restriction: "United States"
+
+seed_target_roles:
+  - "Deployed Engineer"
+  - "Deployed AI Engineer"
+  - "AI Engineer"
+  - "Applied AI Engineer"
+  - "Machine Learning Engineer"
+  - "Applied Machine Learning Engineer"
+  - "Solutions Engineer"
+  - "AI Architect"
+  - "Software Engineer"
+  - "AI/ML Engineer"
+  - "AI Product Engineer"
+  - "AI PM"
+  note: "Not an allowlist — the Scoring Agent reasons about fit beyond this list."
+
+email:
+  min_jobs_target: 20
+  from_address: "aaryan.purohit1@gmail.com"
+  to_address: "aaryan.purohit1@gmail.com"
+
+scoring:
+  model: "claude-sonnet-5"

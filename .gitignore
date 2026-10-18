@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+data/jobsearch.db
+data/leads_inbox/*.json
+!data/leads_inbox/.gitkeep
+data/leads_inbox/processed/*.json
+!data/leads_inbox/processed/.gitkeep
+logs/*.log
+.pytest_cache/
+.DS_Store
